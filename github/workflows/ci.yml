@@ -1,0 +1,12 @@
+name: Build HTML Project
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5-validator-action@v0.4.0
